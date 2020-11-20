@@ -1,0 +1,23 @@
+
+{% extends 'theme.html'%}
+{% block content%}
+<h2>ABC</h2>
+<div class="container">
+    <div class="row">
+{% for Add in employees %}
+
+    <div class="card">
+        <img src="{{Add.image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{Add.Employee_name}}</h5>
+            <p class="card-text">{{Add.email}}</p>
+<!--            <a href="http://127.0.0.1:8000/admin/Add_Employee/add/3/change/" class="btn btn-primary">view details</a>-->
+        </div>
+    </div>
+
+{%endfor%}
+
+    </div>
+</div>
+
+{% endblock  %}
